@@ -6,7 +6,7 @@ import Nav from "./Nav.jsx";
 // #EFECEC
 function Sidebar() {
   return (
-    <aside className="font-primary min-h-screen w-40 py-7 shadow-md shadow-[#FC673640]">
+    <aside className="font-primary col-start-1 col-end-2 row-start-1 row-end-3 min-h-screen w-44 py-7 ">
       <Logo />
       <Nav />
     </aside>

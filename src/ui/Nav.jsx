@@ -4,99 +4,111 @@ import { GrUserWorker } from "react-icons/gr";
 import { MdOutlinePunchClock } from "react-icons/md";
 import { AiOutlineComment } from "react-icons/ai";
 import { MdPostAdd } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Nav() {
   return (
-    <ul className="space-y-4">
-      <li className="border-b pb-2">
-        <div className="mb-2 flex items-center gap-2 px-2">
-          <HiOutlineHome />
-          <span className="font-semibold">Dashboard</span>
+    <ul className="space-y-4 px-3">
+      <li className="border-b pb-2 pt-3 focus-within:bg-slate-50">
+        <div className="flex items-center gap-2 border-b px-2 pb-2 ">
+          <HiOutlineHome className="text-xl text-gray-400" />
+          <span className="text-customBlue font-semibold  ">Dashboard</span>
         </div>
         <ul className="space-y-2">
-          <li className="cursor-pointer">
-            <a
-              href="https"
-              className="flex items-center gap-2 px-2 py-1 tracking-wide"
+          <li>
+            <NavLink
+              class
+              to="dashboard/applications"
+              className="  flex items-center  gap-2
+          rounded-md border-2 border-transparent  px-2 py-2 tracking-wide  hover:bg-slate-100 "
             >
-              <HiOutlineUsers />
-              <span className="font-semibold">Users</span>
-            </a>
+              <TbReportSearch className="text-xl text-gray-400" />
+              <span className="text-customBlue font-semibold ">
+                Applications
+              </span>
+            </NavLink>
           </li>
           <li>
-            <a
-              href="https"
-              className="hover:bg- flex items-center gap-2 px-2 py-1 tracking-wide"
+            <NavLink
+              to="dashboard/workers"
+              className="  flex items-center  gap-2
+          rounded-md border-2 border-transparent  px-2 py-2 tracking-wide  hover:bg-slate-100 "
             >
-              <GrUserWorker />
-              <span className="font-semibold">Workers</span>
-            </a>
+              <GrUserWorker className="text-xl text-gray-400" />
+              <span className="text-customBlue font-semibold ">Workers</span>
+            </NavLink>
           </li>
           <li>
-            <a
-              href="https"
-              className="hover:bg- flex items-center gap-2 px-2 py-1 tracking-wide"
+            <NavLink
+              to="dashboard/users"
+              className="  flex items-center  gap-2
+          rounded-md border-2 border-transparent  px-2 py-2 tracking-wide  hover:bg-slate-100 "
             >
-              <TbReportSearch />
-              <span className="font-semibold">Applications</span>
-            </a>
+              <HiOutlineUsers className="text-xl text-gray-400" />
+              <span className="text-customBlue font-semibold  ">Users</span>
+            </NavLink>
           </li>
           <li>
-            <a
-              href="https"
-              className="hover:bg- flex items-center gap-2 px-2 py-1 tracking-wide"
+            <NavLink
+              to="dashboard/deals"
+              className="  flex items-center  gap-2
+          rounded-md border-2 border-transparent  px-2 py-2 tracking-wide  hover:bg-slate-100 "
             >
-              <MdOutlinePunchClock />
-              <span className="font-semibold">Deals</span>
-            </a>
+              <MdOutlinePunchClock className="text-xl text-gray-400" />
+              <span className="text-customBlue font-semibold ">Deals</span>
+            </NavLink>
           </li>
           <li>
-            <a
-              href="https"
-              className="hover:bg- flex items-center gap-2 px-2 py-1 tracking-wide"
+            <Link
+              to="dashboard/reviews"
+              className="  flex items-center  gap-2
+          rounded-md border-2 border-transparent  px-2 py-2 tracking-wide  hover:bg-slate-100 "
             >
-              <AiOutlineComment />
-              <span className="font-semibold">Reviews</span>
-            </a>
+              <AiOutlineComment className="text-xl text-gray-400" />
+              <span className="text-customBlue font-semibold ">Reviews</span>
+            </Link>
           </li>
           <li>
-            <a
-              href="https"
-              className="hover:bg- flex items-center gap-2 px-2 py-1 tracking-wide"
+            <NavLink
+              to="dashboard/reports"
+              className="  flex items-center  gap-2
+          rounded-md border-2 border-transparent  px-2 py-2 tracking-wide  hover:bg-slate-100 "
             >
-              <TbMessageReport />
-              <span className="font-semibold">Reports</span>
-            </a>
+              <TbMessageReport className="text-xl text-gray-400" />
+              <span className="text-customBlue font-semibold ">Reports</span>
+            </NavLink>
           </li>
           <li>
-            <a
-              href="https"
-              className="hover:bg- flex items-center gap-2 px-2 py-1 tracking-wide"
+            <NavLink
+              to="dashboard/posts"
+              className="  flex items-center  gap-2
+          rounded-md border-2 border-transparent  px-2 py-2 tracking-wide  hover:bg-slate-100 "
             >
-              <MdPostAdd />
-              <span className="font-semibold">Posts</span>
-            </a>
+              <MdPostAdd className="text-xl text-gray-400" />
+              <span className="text-customBlue font-semibold ">Posts</span>
+            </NavLink>
           </li>
         </ul>
       </li>
       <li>
-        <a
-          href="https"
-          className="hover:bg- flex items-center gap-2 px-2 py-1 tracking-wide"
+        <NavLink
+          to="/certificates"
+          className="  flex items-center  gap-2
+          rounded-md border-2 border-transparent  px-2 py-2 tracking-wide  hover:bg-slate-100 "
         >
-          <TbCertificate />
-          <span className="font-semibold">Certificats</span>
-        </a>
+          <TbCertificate className="text-xl text-gray-400" />
+          <span className="text-customBlue font-semibold ">Certificates</span>
+        </NavLink>
       </li>
       <li>
-        <a
-          href="https"
-          className="hover:bg- flex items-center gap-2 px-2 py-1 tracking-wide"
+        <NavLink
+          to="/reports"
+          className="  flex items-center  gap-2
+          rounded-md border-2 border-transparent  px-2 py-2 tracking-wide  hover:bg-slate-100 "
         >
-          <TbMessageReport />
-          <span className="font-semibold">Reports</span>
-        </a>
+          <TbMessageReport className="text-xl text-gray-400" />
+          <span className="text-customBlue font-semibold ">Reports</span>
+        </NavLink>
       </li>
     </ul>
   );
