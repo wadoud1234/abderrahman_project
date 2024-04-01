@@ -5,6 +5,7 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Dashboard from "./Pages/Dashboard";
 import Reports from "./Pages/Reports";
 import Certificates from "./Pages/Certificates";
+import PageNotFound from "./Pages/PageNotFound";
 import Application from "./features/Applications/Application";
 import Certificate from "./features/Certificates/Certificate";
 import Deal from "./features/Deals/Deal";
@@ -44,6 +45,7 @@ function App() {
             <Route path="reports" element={<Reports />} />
             <Route path="certificates" element={<Certificates />} />
           </Route>
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
     </QueryClientProvider>
