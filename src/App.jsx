@@ -31,7 +31,7 @@ function App() {
           <Route element={<AppLayout />}>
             <Route index element={<Navigate replace to="dashboard" />} />
             <Route path="dashboard" element={<Dashboard />}>
-             <Route index element={<Navigate replace to="applications" />} />
+              <Route index element={<Navigate replace to="applications" />} />
               <Route path="applications" element={<Application />} />
               <Route path="deals" element={<Deal />} />
               <Route path="posts" element={<Post />} />

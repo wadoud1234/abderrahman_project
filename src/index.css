@@ -7,6 +7,12 @@
   padding: 0;
   box-sizing: border-box;
 }
-html{
-  font-size: 62.5%;
+
+/* For the active link and the icon  */
+.active svg {
+  color:#0c2d57;
+}
+.active {
+  background-color: rgb(241 245 249);
+ 
 }
