@@ -50,6 +50,16 @@ function Nav() {
           </li>
           <li>
             <NavLink
+              to="dashboard/certificates"
+              className=" flex w-44 items-center  gap-4
+          rounded-md border-2 border-transparent  px-2 py-2 tracking-wide  hover:bg-slate-100 "
+            >
+              <TbCertificate className="text-xl text-gray-400" />
+              <span className="text-customBlue font-semibold  ">Certificates</span>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
               to="dashboard/deals"
               className="flex w-44 items-center  gap-4
           rounded-md border-2 border-transparent  px-2 py-2 tracking-wide  hover:bg-slate-100 "
