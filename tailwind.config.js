@@ -1,11 +1,12 @@
 /** @type {import('tailwindcss').Config} */
-//eslint-disable-next-line
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      fontFamily: {
-        primary: "Poppins",
+      colors: {
+        customBlue: "#0c2d57",
+        customOrange: "#fc6736",
+        customWhite: "#EFECEC",
       },
     },
   },
