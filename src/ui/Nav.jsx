@@ -6,7 +6,7 @@ import { AiOutlineComment } from "react-icons/ai";
 import { MdPostAdd } from "react-icons/md";
 import { Link, NavLink } from "react-router-dom";
 
-function Nav() {
+function Nav({setSection}) {
   return (
     <ul className="space-y-4 px-3">
       <li className="border-b pb-2 pt-3 ">
@@ -18,6 +18,7 @@ function Nav() {
           <li>
             <NavLink
               to="dashboard/applications"
+              onClick={()=>setSection("Application")}
               className=" flex w-44 items-center gap-4
               rounded-md border-2 border-transparent  px-2 py-2 tracking-wide  hover:bg-slate-100 "
             >
@@ -31,6 +32,7 @@ function Nav() {
           <li>
             <NavLink
               to="dashboard/workers"
+              onClick={()=>setSection("Workers")}
               className=" flex w-44 items-center  gap-4
           rounded-md border-2 border-transparent  px-2 py-2 tracking-wide  hover:bg-slate-100 "
             >
@@ -41,6 +43,7 @@ function Nav() {
           <li>
             <NavLink
               to="dashboard/users"
+              onClick={()=>setSection("Users")}
               className=" flex w-44 items-center  gap-4
           rounded-md border-2 border-transparent  px-2 py-2 tracking-wide  hover:bg-slate-100 "
             >
@@ -51,6 +54,7 @@ function Nav() {
           <li>
             <NavLink
               to="dashboard/certificates"
+              onClick={()=>setSection("Certificates")}
               className=" flex w-44 items-center  gap-4
           rounded-md border-2 border-transparent  px-2 py-2 tracking-wide  hover:bg-slate-100 "
             >
@@ -61,6 +65,7 @@ function Nav() {
           <li>
             <NavLink
               to="dashboard/deals"
+              onClick={()=>setSection("Deals")}
               className="flex w-44 items-center  gap-4
           rounded-md border-2 border-transparent  px-2 py-2 tracking-wide  hover:bg-slate-100 "
             >
@@ -71,6 +76,7 @@ function Nav() {
           <li>
             <NavLink
               to="dashboard/reviews"
+              onClick={()=>setSection("Reviews")}
               className=" flex w-44 items-center  gap-4
           rounded-md border-2 border-transparent  px-2 py-2 tracking-wide  hover:bg-slate-100 "
             >
@@ -81,6 +87,7 @@ function Nav() {
           <li>
             <NavLink
               to="dashboard/reports"
+              onClick={()=>setSection("Reports")}
               className=" flex w-44 items-center  gap-4
           rounded-md border-2 border-transparent  px-2 py-2 tracking-wide  hover:bg-slate-100 "
             >
@@ -91,6 +98,7 @@ function Nav() {
           <li>
             <NavLink
               to="dashboard/posts"
+              onClick={()=>setSection("Posts")}
               className="  flex w-44 items-center  gap-4
           rounded-md border-2 border-transparent  px-2 py-2 tracking-wide  hover:bg-slate-100 "
             >
@@ -103,6 +111,7 @@ function Nav() {
       <li>
         <NavLink
           to="/certificates"
+          onClick={()=>setSection("Certificates")}
           className="  flex w-44 items-center  gap-4
           rounded-md border-2 border-transparent  px-2 py-2 tracking-wide  hover:bg-slate-100 "
         >
@@ -113,6 +122,7 @@ function Nav() {
       <li>
         <NavLink
           to="/reports"
+          onClick={()=>setSection("Reports")}
           className=" flex w-44 items-center  gap-4
           rounded-md border-2 border-transparent  px-2 py-2 tracking-wide  hover:bg-slate-100 "
         >
