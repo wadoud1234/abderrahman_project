@@ -18,7 +18,7 @@ function Nav({setSection}) {
           <li>
             <NavLink
               to="dashboard/applications"
-              onClick={()=>setSection("Application")}
+              onClick={()=>setSection("Dashboard > Application")}
               className=" flex w-44 items-center gap-4
               rounded-md border-2 border-transparent  px-2 py-2 tracking-wide  hover:bg-slate-100 "
             >
@@ -32,7 +32,7 @@ function Nav({setSection}) {
           <li>
             <NavLink
               to="dashboard/workers"
-              onClick={()=>setSection("Workers")}
+              onClick={()=>setSection("Dashboard > Workers")}
               className=" flex w-44 items-center  gap-4
           rounded-md border-2 border-transparent  px-2 py-2 tracking-wide  hover:bg-slate-100 "
             >
@@ -43,7 +43,7 @@ function Nav({setSection}) {
           <li>
             <NavLink
               to="dashboard/users"
-              onClick={()=>setSection("Users")}
+              onClick={()=>setSection("Dashboard > Users")}
               className=" flex w-44 items-center  gap-4
           rounded-md border-2 border-transparent  px-2 py-2 tracking-wide  hover:bg-slate-100 "
             >
@@ -54,7 +54,7 @@ function Nav({setSection}) {
           <li>
             <NavLink
               to="dashboard/certificates"
-              onClick={()=>setSection("Certificates")}
+              onClick={()=>setSection("Dashboard > Certificates")}
               className=" flex w-44 items-center  gap-4
           rounded-md border-2 border-transparent  px-2 py-2 tracking-wide  hover:bg-slate-100 "
             >
@@ -65,7 +65,7 @@ function Nav({setSection}) {
           <li>
             <NavLink
               to="dashboard/deals"
-              onClick={()=>setSection("Deals")}
+              onClick={()=>setSection("Dashboard > Deals")}
               className="flex w-44 items-center  gap-4
           rounded-md border-2 border-transparent  px-2 py-2 tracking-wide  hover:bg-slate-100 "
             >
@@ -76,7 +76,7 @@ function Nav({setSection}) {
           <li>
             <NavLink
               to="dashboard/reviews"
-              onClick={()=>setSection("Reviews")}
+              onClick={()=>setSection("Dashboard > Reviews")}
               className=" flex w-44 items-center  gap-4
           rounded-md border-2 border-transparent  px-2 py-2 tracking-wide  hover:bg-slate-100 "
             >
@@ -87,7 +87,7 @@ function Nav({setSection}) {
           <li>
             <NavLink
               to="dashboard/reports"
-              onClick={()=>setSection("Reports")}
+              onClick={()=>setSection("Dashboard > Reports")}
               className=" flex w-44 items-center  gap-4
           rounded-md border-2 border-transparent  px-2 py-2 tracking-wide  hover:bg-slate-100 "
             >
@@ -98,7 +98,7 @@ function Nav({setSection}) {
           <li>
             <NavLink
               to="dashboard/posts"
-              onClick={()=>setSection("Posts")}
+              onClick={()=>setSection("Dashboard > Posts")}
               className="  flex w-44 items-center  gap-4
           rounded-md border-2 border-transparent  px-2 py-2 tracking-wide  hover:bg-slate-100 "
             >

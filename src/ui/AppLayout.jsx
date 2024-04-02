@@ -5,7 +5,7 @@ import { useState } from "react";
 
 function AppLayout() {
   //to know the section where we are 
-  const [section,setSection]=useState("Application")
+  const [section,setSection]=useState("Dashboard > Applications")
   
   return (
     <div className="grid min-h-dvh grid-cols-[auto_1fr] grid-rows-[auto_1fr]">
