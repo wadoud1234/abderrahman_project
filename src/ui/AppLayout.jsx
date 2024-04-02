@@ -11,7 +11,7 @@ function AppLayout() {
     <div className="grid min-h-dvh grid-cols-[auto_1fr] grid-rows-[auto_1fr]">
       <Header section={section}/>
       <Sidebar setSection={setSection} />
-      <main className=" bg-green-300 ">
+      <main className=" ">
           <Outlet />
       </main>
     </div>
