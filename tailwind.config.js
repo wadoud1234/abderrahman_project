@@ -8,6 +8,7 @@ export default {
         customBlue: "#0c2d57",
         customOrange: "#fc6736",
         customWhite: "#EFECEC",
+        customGray:"rgb(241 245 249)"
       },
     },
   },

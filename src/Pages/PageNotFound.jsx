@@ -1,0 +1,12 @@
+import { Link, NavLink } from "react-router-dom"
+
+function PageNotFound() {
+  return (
+    <div>
+      <p className="text-xl">this page is unavailable please move back 😔</p>
+      <Link to="dashboard/applications" className="text-blue-600  hover:underline">&larr;move back to the dash board</Link>
+    </div>
+  )
+}
+
+export default PageNotFound
