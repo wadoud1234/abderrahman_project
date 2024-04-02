@@ -7,7 +7,7 @@ function Header({ section }) {
       <Date />
       <div className="bg-customGray h-2/3 rounded-2xl mt-4 p-9">
         <p className="text-blue-800 text-xl mb-2">Welcome back Admin,</p>
-        <p>Let's dive into your dashboard , the results are waiting for you </p>
+        <p>Let's dive into your dashboard , and explore what's new </p>
         <p>keep it up and achieve your goals</p>
       <img src="/public/assets/Data-illustration.svg" alt="illustration_dashboard" className="absolute bottom-[-16px] right-20 h-64 transition-all duration-300 hover:scale-110"/>
       </div>
