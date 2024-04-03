@@ -1,37 +1,33 @@
 import { HiOutlineHome, HiOutlineUsers } from "react-icons/hi2";
-import { TbMessageReport, TbCertificate, TbReportSearch } from "react-icons/tb";
+import { TbMessageReport, TbCertificate } from "react-icons/tb";
 import { GrUserWorker } from "react-icons/gr";
-import { MdOutlinePunchClock } from "react-icons/md";
+import { MdHomeRepairService, MdOutlinePunchClock } from "react-icons/md";
 import { AiOutlineComment } from "react-icons/ai";
 import { MdPostAdd } from "react-icons/md";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Nav({ setSection }) {
   return (
     <ul className="space-y-4 px-3">
-      <li className="border-b pb-2 pt-3 ">
-        <div className="mb-2 flex w-44 items-center gap-4 border-b px-2 pb-2 ">
-          <HiOutlineHome className="text-xl text-gray-400" />
+      <li className="space-y-4 border-b pb-2 pt-3 ">
+        <div className="mb-2 flex w-48 items-center gap-6  border-b px-2 pb-2 xl:w-52 xl:pl-4  ">
+          <HiOutlineHome className=" text-xl text-gray-400 xl:text-3xl" />
 
-          <span className="text-primaryColor font-semibold  ">Dashboard</span>
-
-          
-
+          <span className="font-semibold text-primaryColor xl:text-xl  ">
+            Dashboard
+          </span>
         </div>
-        <ul className="space-y-2">
+        <ul className="space-y-4">
           <li>
             <NavLink
               to="dashboard/applications"
               onClick={() => setSection("Dashboard > Application")}
-              className=" flex w-44 items-center gap-4
-              rounded-md border-2 border-transparent  px-2 py-2 tracking-wide  hover:bg-slate-100 "
+              className=" flex w-48 items-center gap-6 
+              rounded-md   px-2 py-2 tracking-wide hover:bg-slate-100  xl:w-56 xl:pl-4  "
             >
-              <TbReportSearch className="text-xl text-gray-400" />
+              <MdHomeRepairService className=" text-xl  text-gray-400 xl:text-3xl" />
 
-              <span className="text-primaryColor relative font-semibold ">
-
-             
-
+              <span className=" font-semibold text-primaryColor xl:text-xl ">
                 Applications
               </span>
             </NavLink>
@@ -41,105 +37,98 @@ function Nav({ setSection }) {
             <NavLink
               to="dashboard/workers"
               onClick={() => setSection("Dashboard > Workers")}
-              className=" flex w-44 items-center  gap-4
-          rounded-md border-2 border-transparent  px-2 py-2 tracking-wide  hover:bg-slate-100 "
+              className=" flex w-48 items-center  gap-6 
+          rounded-md   px-2 py-2 tracking-wide hover:bg-slate-100  xl:w-56 xl:pl-4  "
             >
-              <GrUserWorker className="text-xl text-gray-400" />
+              <GrUserWorker className="text-xl text-gray-400  xl:text-3xl" />
 
-              <span className="text-primaryColor font-semibold ">Workers</span>
-
-              
-
+              <span className="xl:text-xlxl:text-xl font-semibold text-primaryColor ">
+                Workers
+              </span>
             </NavLink>
           </li>
           <li>
             <NavLink
               to="dashboard/users"
               onClick={() => setSection("Dashboard > Users")}
-              className=" flex w-44 items-center  gap-4
-          rounded-md border-2 border-transparent  px-2 py-2 tracking-wide  hover:bg-slate-100 "
+              className=" flex w-48 items-center  gap-6 
+          rounded-md   px-2 py-2 tracking-wide hover:bg-slate-100  xl:w-56 xl:pl-4  "
             >
-              <HiOutlineUsers className="text-xl text-gray-400" />
+              <HiOutlineUsers className="text-xl text-gray-400  xl:text-3xl" />
 
-              <span className="text-primaryColor font-semibold  ">Users</span>
-
-              
-
+              <span className=" font-semibold text-primaryColor xl:text-xl">
+                Users
+              </span>
             </NavLink>
           </li>
           <li>
             <NavLink
               to="dashboard/certificates"
               onClick={() => setSection("Dashboard > Certificates")}
-              className=" flex w-44 items-center  gap-4
-          rounded-md border-2 border-transparent  px-2 py-2 tracking-wide  hover:bg-slate-100 "
+              className=" flex w-48 items-center  gap-6 
+          rounded-md   px-2 py-2 tracking-wide hover:bg-slate-100  xl:w-56 xl:pl-4  "
             >
-              <TbCertificate className="text-xl text-gray-400" />
+              <TbCertificate className="text-xl text-gray-400  xl:text-3xl" />
 
-              <span className="text-primaryColor font-semibold  ">Certificates</span>
-
-              
-
+              <span className=" font-semibold text-primaryColor xl:text-xl ">
+                Certificates
+              </span>
             </NavLink>
           </li>
           <li>
             <NavLink
               to="dashboard/deals"
               onClick={() => setSection("Dashboard > Deals")}
-              className="flex w-44 items-center  gap-4
-          rounded-md border-2 border-transparent  px-2 py-2 tracking-wide  hover:bg-slate-100 "
+              className="flex w-48 items-center  gap-6 
+          rounded-md   px-2 py-2 tracking-wide hover:bg-slate-100  xl:w-56 xl:pl-4  "
             >
-              <MdOutlinePunchClock className="text-xl text-gray-400" />
+              <MdOutlinePunchClock className="text-xl text-gray-400  xl:text-3xl" />
 
-              <span className="text-primaryColor font-semibold ">Deals</span>
-
-             
-
+              <span className=" font-semibold text-primaryColor xl:text-xl">
+                Deals
+              </span>
             </NavLink>
           </li>
           <li>
             <NavLink
               to="dashboard/reviews"
               onClick={() => setSection("Dashboard > Reviews")}
-              className=" flex w-44 items-center  gap-4
-          rounded-md border-2 border-transparent  px-2 py-2 tracking-wide  hover:bg-slate-100 "
+              className=" flex w-48 items-center  gap-6 
+          rounded-md   px-2 py-2 tracking-wide hover:bg-slate-100  xl:w-56 xl:pl-4  "
             >
-              <AiOutlineComment className="text-xl text-gray-400" />
+              <AiOutlineComment className="text-xl text-gray-400  xl:text-3xl" />
 
-              <span className="text-primaryColor font-semibold ">Reviews</span>
-
-              
-
+              <span className=" font-semibold  text-primaryColor xl:text-xl">
+                Reviews
+              </span>
             </NavLink>
           </li>
           <li>
             <NavLink
               to="dashboard/reports"
               onClick={() => setSection("Dashboard > Reports")}
-              className=" flex w-44 items-center  gap-4
-          rounded-md border-2 border-transparent  px-2 py-2 tracking-wide  hover:bg-slate-100 "
+              className=" flex w-48 items-center  gap-6 
+          rounded-md   px-2 py-2 tracking-wide hover:bg-slate-100  xl:w-56 xl:pl-4  "
             >
-              <TbMessageReport className="text-xl text-gray-400" />
+              <TbMessageReport className="text-xl text-gray-400  xl:text-3xl" />
 
-              <span className="text-primaryColor font-semibold ">Reports</span>
-
-              
-
+              <span className=" font-semibold text-primaryColor xl:text-xl ">
+                Reports
+              </span>
             </NavLink>
           </li>
           <li>
             <NavLink
               to="dashboard/posts"
               onClick={() => setSection("Dashboard > Posts")}
-              className="  flex w-44 items-center  gap-4
-          rounded-md border-2 border-transparent  px-2 py-2 tracking-wide  hover:bg-slate-100 "
+              className="  flex w-48 items-center  gap-6 
+          rounded-md   px-2 py-2 tracking-wide hover:bg-slate-100  xl:w-56 xl:pl-4  "
             >
-              <MdPostAdd className="text-xl text-gray-400" />
+              <MdPostAdd className="text-xl text-gray-400  xl:text-3xl" />
 
-              <span className="text-primaryColor font-semibold ">Posts</span>
-
-             
-
+              <span className=" font-semibold text-primaryColor xl:text-xl ">
+                Posts
+              </span>
             </NavLink>
           </li>
         </ul>
@@ -148,30 +137,28 @@ function Nav({ setSection }) {
         <NavLink
           to="/certificates"
           onClick={() => setSection("Certificates")}
-          className="  flex w-44 items-center  gap-4
-          rounded-md border-2 border-transparent  px-2 py-2 tracking-wide  hover:bg-slate-100 "
+          className="  flex w-48 items-center  gap-6 
+          rounded-md   px-2 py-2 tracking-wide hover:bg-slate-100  xl:w-56 xl:pl-4  "
         >
-          <TbCertificate className="text-xl text-gray-400" />
- 
-          <span className="text-primaryColor font-semibold ">Certificates</span>
+          <TbCertificate className="text-xl text-gray-400  xl:text-3xl" />
 
-          
-
+          <span className=" font-semibold text-primaryColor xl:text-xl ">
+            Certificates
+          </span>
         </NavLink>
       </li>
       <li>
         <NavLink
           to="/reports"
           onClick={() => setSection("Reports")}
-          className=" flex w-44 items-center  gap-4
-          rounded-md border-2 border-transparent  px-2 py-2 tracking-wide  hover:bg-slate-100 "
+          className=" flex w-48 items-center  gap-6 
+          rounded-md   px-2 py-2 tracking-wide hover:bg-slate-100  xl:w-56 xl:pl-4  "
         >
-          <TbMessageReport className="text-xl text-gray-400" />
+          <TbMessageReport className="text-xl text-gray-400  xl:text-3xl" />
 
-          <span className="text-primaryColor font-semibold ">Reports</span>
-
-          
-
+          <span className=" font-semibold text-primaryColor xl:text-xl ">
+            Reports
+          </span>
         </NavLink>
       </li>
     </ul>
