@@ -42,7 +42,7 @@ function Nav({ setSection }) {
             >
               <GrUserWorker className="text-xl text-gray-400  xl:text-3xl" />
 
-              <span className="xl:text-xlxl:text-xl font-semibold text-primaryColor ">
+              <span className="xl:text-xl font-semibold text-primaryColor ">
                 Workers
               </span>
             </NavLink>
