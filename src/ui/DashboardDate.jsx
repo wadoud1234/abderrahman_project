@@ -1,4 +1,4 @@
-function Time() {
+function DashboardDate() {
   const currentDate = new Date();
 
   const dayOfTheWeek = currentDate.toLocaleDateString("en-US", {
@@ -17,4 +17,4 @@ function Time() {
   );
 }
 
-export default Time;
+export default DashboardDate;
