@@ -5,8 +5,8 @@ export default {
     extend: {
       fontFamily: { primary: "Poppins,sans-serif" },
       colors: {
-        customBlue: "#0c2d57",
-        customOrange: "#fc6736",
+        primaryColor: "#0c2d57",
+        secondaryColor: "#fc6736",
         customWhite: "#EFECEC",
         customGray:"rgb(241 245 249)"
       },
