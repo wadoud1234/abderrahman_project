@@ -1,9 +1,16 @@
+import { useLocation } from "react-router";
 import DashboardDate from "./DashboardDate";
 
-function Header({ section }) {
+function Header() {
+  const location = useLocation();
+  const { pathname } = location;
+  const path =
+    pathname.slice(1).charAt(0).toUpperCase() +
+    pathname.slice(2).replaceAll("/", " > ");
+
   return (
     <header className="relative mx-auto my-8 h-60 w-full px-12 ">
-      <p className="text-primaryColor mb-2 text-2xl font-semibold">{section}</p>
+      <p className="text-primaryColor mb-2 text-2xl font-semibold">{path}</p>
       <DashboardDate />
       <div className="min-h-2/3 bg-customGray mt-4 rounded-2xl p-9">
         <p className="mb-2 text-xl text-blue-800">Welcome back Admin,</p>
