@@ -1,4 +1,5 @@
 import { BarChart } from "@tremor/react";
+import { useState } from "react";
 const chartdata = [
   {
     date: "Jan 23",
@@ -39,15 +40,20 @@ const chartdata = [
 ];
 
 function BarChartAdmin() {
+  const [value,setValue]=useState(null)
   return (
-    <div className="rounded-2xl bg-customGray p-4">
+    <div className="rounded-2xl bg-customGray p-2 md:px-8 md:py-6">
       <BarChart
-        className="h-72"
+        className="h-52 md:h-64 lg:h-80"
         data={chartdata}
         index="date"
         categories={["Created", "Accepted", "Declined"]}
-        colors={["blue-800", "orange-500", "yellow-400"]}
-        yAxisWidth={30}
+        colors={["blue-800", "green-600", "orange-500"]}
+        yAxisWidth={25}
+        showAnimation
+        animationDuration={1000}
+        barCategoryGap={"15%"}
+        onValueChange={(value)=>setValue(value)}
       />
     </div>
   );
