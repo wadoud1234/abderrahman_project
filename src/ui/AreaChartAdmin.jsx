@@ -43,10 +43,9 @@ const chartdata = [
 export function AreaChartAdmin() {
   const [value, setValue] = useState(null);
   return (
-    <div className="rounded-2xl bg-customGray p-3 pt-4 sm:p-4 sm:pt-6">
-      <h3 className=" text-lg sm:text-2xl ">Applications Stats</h3>
+    <div className="rounded-2xl bg-customGray p-3 sm:p-4">
       <AreaChart
-        className="mt-1 h-52 sm:mt-2 sm:h-80"
+        className="h-52 sm:h-80"
         data={chartdata}
         index="date"
         categories={["Created", "Declined", "Accepted"]}
