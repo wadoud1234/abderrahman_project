@@ -1,9 +1,11 @@
+import BarChartAdmin from "../../ui/BarChartAdmin";
+
 function Application() {
   return (
     <div>
-      application
+      <BarChartAdmin />
     </div>
-  )
+  );
 }
 
-export default Application
+export default Application;
