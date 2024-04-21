@@ -13,20 +13,20 @@ function Nav() {
         <div className="mb-2 flex w-48 items-center gap-6  border-b px-2 pb-2 xl:w-52 xl:pl-4  ">
           <HiOutlineHome className=" text-xl text-gray-400 xl:text-3xl" />
 
-          <span className="text-primaryColor font-semibold xl:text-xl  ">
+          <span className="font-semibold text-primaryColor xl:text-xl  ">
             Dashboard
           </span>
         </div>
-        <ul className="space-y-4">
+        <ul className="space-y-3">
           <li>
             <NavLink
               to="dashboard/applications"
               className=" flex w-48 items-center gap-6 
-              rounded-md   px-2 py-2 tracking-wide hover:bg-slate-100  xl:w-56 xl:pl-4  "
+              rounded-md px-2 py-2 tracking-wide hover:bg-slate-100  xl:w-56 xl:pl-4  "
             >
-              <MdHomeRepairService className=" text-xl  text-gray-400 xl:text-3xl" />
+              <MdHomeRepairService className=" text-xl text-gray-400 xl:text-3xl" />
 
-              <span className=" text-primaryColor font-semibold xl:text-xl ">
+              <span className=" font-semibold text-primaryColor xl:text-xl ">
                 Applications
               </span>
             </NavLink>
@@ -40,7 +40,7 @@ function Nav() {
             >
               <GrUserWorker className="text-xl text-gray-400  xl:text-3xl" />
 
-              <span className="text-primaryColor font-semibold xl:text-xl ">
+              <span className="font-semibold text-primaryColor xl:text-xl ">
                 Workers
               </span>
             </NavLink>
@@ -53,7 +53,7 @@ function Nav() {
             >
               <HiOutlineUsers className="text-xl text-gray-400  xl:text-3xl" />
 
-              <span className=" text-primaryColor font-semibold xl:text-xl">
+              <span className=" font-semibold text-primaryColor xl:text-xl">
                 Users
               </span>
             </NavLink>
@@ -66,7 +66,7 @@ function Nav() {
             >
               <TbCertificate className="text-xl text-gray-400  xl:text-3xl" />
 
-              <span className=" text-primaryColor font-semibold xl:text-xl ">
+              <span className=" font-semibold text-primaryColor xl:text-xl ">
                 Certificates
               </span>
             </NavLink>
@@ -79,7 +79,7 @@ function Nav() {
             >
               <MdOutlinePunchClock className="text-xl text-gray-400  xl:text-3xl" />
 
-              <span className=" text-primaryColor font-semibold xl:text-xl">
+              <span className=" font-semibold text-primaryColor xl:text-xl">
                 Deals
               </span>
             </NavLink>
@@ -92,7 +92,7 @@ function Nav() {
             >
               <AiOutlineComment className="text-xl text-gray-400  xl:text-3xl" />
 
-              <span className=" text-primaryColor  font-semibold xl:text-xl">
+              <span className=" font-semibold  text-primaryColor xl:text-xl">
                 Reviews
               </span>
             </NavLink>
@@ -105,7 +105,7 @@ function Nav() {
             >
               <TbMessageReport className="text-xl text-gray-400  xl:text-3xl" />
 
-              <span className=" text-primaryColor font-semibold xl:text-xl ">
+              <span className=" font-semibold text-primaryColor xl:text-xl ">
                 Reports
               </span>
             </NavLink>
@@ -118,7 +118,7 @@ function Nav() {
             >
               <MdPostAdd className="text-xl text-gray-400  xl:text-3xl" />
 
-              <span className=" text-primaryColor font-semibold xl:text-xl ">
+              <span className=" font-semibold text-primaryColor xl:text-xl ">
                 Posts
               </span>
             </NavLink>
@@ -133,7 +133,7 @@ function Nav() {
         >
           <TbCertificate className="text-xl text-gray-400  xl:text-3xl" />
 
-          <span className=" text-primaryColor font-semibold xl:text-xl ">
+          <span className=" font-semibold text-primaryColor xl:text-xl ">
             Certificates
           </span>
         </NavLink>
@@ -146,7 +146,7 @@ function Nav() {
         >
           <TbMessageReport className="text-xl text-gray-400  xl:text-3xl" />
 
-          <span className=" text-primaryColor font-semibold xl:text-xl ">
+          <span className=" font-semibold text-primaryColor xl:text-xl ">
             Reports
           </span>
         </NavLink>

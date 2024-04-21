@@ -1,5 +1,11 @@
+import { AreaChartAdmin } from "../../ui/AreaChartAdmin";
+
 function Worker() {
-  return <div>worker</div>;
+  return (
+    <div>
+      <AreaChartAdmin />
+    </div>
+  );
 }
 
 export default Worker;
