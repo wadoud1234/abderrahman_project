@@ -40,7 +40,7 @@ const chartdata = [
 ];
 
 function BarChartAdmin() {
-  const [value,setValue]=useState(null)
+  const [value, setValue] = useState(null);
   return (
     <div className="rounded-2xl bg-customGray p-2 md:px-8 md:py-6">
       <BarChart
@@ -53,7 +53,7 @@ function BarChartAdmin() {
         showAnimation
         animationDuration={1000}
         barCategoryGap={"15%"}
-        onValueChange={(value)=>setValue(value)}
+        onValueChange={(value) => setValue(value)}
       />
     </div>
   );
