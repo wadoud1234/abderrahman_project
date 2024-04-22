@@ -1,7 +1,9 @@
 import { BarChart } from "@tremor/react";
 import { useState } from "react";
 
+
 function BarChartAdmin({ data }) {
+
   const [value, setValue] = useState(null);
   return (
     <div className="min-w-full rounded-2xl bg-customGray p-2 md:col-start-1 md:col-end-3 md:px-8  md:py-6">

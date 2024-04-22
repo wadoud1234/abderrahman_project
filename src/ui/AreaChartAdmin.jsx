@@ -45,12 +45,14 @@ export function AreaChartAdmin() {
   return (
     <div className="rounded-2xl bg-customGray p-3 sm:p-4">
       <AreaChart
-        className="h-52 sm:h-80"
+        className="h-52 md:h-64 lg:h-80"
         data={chartdata}
         index="date"
         categories={["Created", "Declined", "Accepted"]}
         colors={["blue-500", "orange-500", "green-500"]}
         yAxisWidth={30}
+        showAnimation
+        animationDuration={1000}
         onValueChange={(v) => setValue(v)}
         connectNulls={true}
       />
