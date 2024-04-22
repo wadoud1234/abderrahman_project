@@ -19,7 +19,7 @@ function Header() {
         </p>
         <p className="text-primaryColor">keep it up and achieve your goals</p>
         <img
-          src="/public/assets/Data-illustration.svg"
+          src="/assets/Data-illustration.svg"
           alt="illustration_dashboard"
           className="absolute -bottom-4 right-20 hidden h-64 lg:block "
         />

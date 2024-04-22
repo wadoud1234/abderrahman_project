@@ -43,7 +43,7 @@ const chartdata = [
 export function AreaChartAdmin() {
   const [value, setValue] = useState(null);
   return (
-    <div className="rounded-2xl bg-customGray p-3 sm:p-4">
+    <div className="rounded-2xl bg-customGray p-1 sm:p-4">
       <AreaChart
         className="h-52 md:h-64 lg:h-80"
         data={chartdata}
