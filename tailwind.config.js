@@ -64,7 +64,7 @@ export default {
           background: {
             muted: "#131A2B",
             subtle: colors.gray[800],
-            DEFAULT: colors.gray[900],
+            DEFAULT: colors.gray[100],
             emphasis: colors.gray[300],
           },
           border: {
@@ -76,7 +76,7 @@ export default {
           content: {
             subtle: colors.gray[600],
             DEFAULT: colors.gray[500],
-            emphasis: colors.gray[200],
+            emphasis: colors.blue[800],
             strong: colors.gray[50],
             inverted: colors.gray[950],
           },
