@@ -40,8 +40,12 @@ const chartdata = [
   },
 ];
 
-export function AreaChartAdmin() {
+export function AreaChartAdmin({ route }) {
   const [value, setValue] = useState(null);
+  // const [dataType, setDataType] = useState("Days");
+  // const dataChart = useData(`${route}/${dataType}`);
+  // <Buttons />;
+
   return (
     <div className="rounded-2xl bg-customGray p-1 sm:p-4">
       <AreaChart
