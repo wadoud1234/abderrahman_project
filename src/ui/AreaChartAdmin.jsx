@@ -1,6 +1,7 @@
 import { AreaChart } from "@tremor/react";
 import { useState } from "react";
 import { generateColors, getChartCategories } from "../utils/helpers";
+import Buttons from "./Buttons";
 
 const chartdataMonths = [
   {
@@ -127,7 +128,8 @@ export function AreaChartAdmin({ route }) {
   const categories = getChartCategories(chartdataMonths);
   const colors = generateColors(categories.length);
   return (
-    <div className="rounded-2xl  bg-customGray p-1 sm:p-4">
+    <>
+    <div className=" mb-4 rounded-2xl  bg-customGray p-1 sm:p-4">
       <AreaChart
         className="h-52 md:h-64 lg:h-80"
         data={chartdataMonths}
@@ -141,5 +143,7 @@ export function AreaChartAdmin({ route }) {
         connectNulls={true}
       />
     </div>
+    <Buttons />
+    </>
   );
 }
