@@ -1,3 +1,5 @@
+import { formatNumber } from "../utils/helpers";
+
 function Statistic({ color, text, icon, data }) {
   return (
     <div
@@ -10,7 +12,9 @@ font-normal text-[#8a8e97] md:mb-2`}
         >
           {text}
         </p>
-        <p className="text-lg font-semibold md:text-2xl">{data}</p>
+        <p className="text-lg font-semibold md:text-2xl">
+          {formatNumber(data)}
+        </p>
       </div>
       <span className={`text-${color}-500 text-2xl md:text-3xl `}>{icon}</span>
     </div>
