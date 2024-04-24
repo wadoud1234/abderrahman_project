@@ -1,12 +1,7 @@
-function DashboardDate() {
-  const currentDate = new Date();
+import { getDate } from "../utils/helpers";
 
-  const dayOfTheWeek = currentDate.toLocaleDateString("en-US", {
-    weekday: "long",
-  });
-  const day = currentDate.getDate();
-  const month = currentDate.toLocaleDateString("en-US", { month: "long" });
-  const year = currentDate.getFullYear();
+function DashboardDate() {
+  const {dayOfTheWeek,day,month,year}=getDate()
   return (
     <div>
       <p className="text-stone-400 text-xs tracking-wider">
