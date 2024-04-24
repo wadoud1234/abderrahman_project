@@ -1,15 +1,17 @@
 export function getChartCategories(dataArray) {
   const categories = new Set();
-
-  dataArray.forEach((dataObj) => {
-    Object.keys(dataObj)
+    Object.keys(dataArray.at(0))
       .slice(1)
       .forEach((key) => {
         categories.add(key);
       });
-  });
 
   return Array.from(categories);
+}
+export function getDonutChartCategories(dataArray) {
+  const categories = dataArray.map((dataObj) => dataObj.name);
+
+  return categories;
 }
 
 export function generateColors(numColors) {
@@ -35,4 +37,15 @@ export function formatNumber(num) {
   }
 
   return num.toFixed(2);
+}
+export function getDate() {
+  const currentDate = new Date();
+
+  const dayOfTheWeek = currentDate.toLocaleDateString("en-US", {
+    weekday: "long",
+  });
+  const day = currentDate.getDate();
+  const month = currentDate.toLocaleDateString("en-US", { month: "long" });
+  const year = currentDate.getFullYear();
+  return { dayOfTheWeek, day, month, year };
 }
