@@ -1,6 +1,7 @@
 import { BarChart } from "@tremor/react";
 import { useState } from "react";
 import Buttons from "./Buttons";
+import Button from "./Button";
 import { generateColors, getChartCategories } from "../utils/helpers";
 const chartdataMonths = [
   {
@@ -141,7 +142,11 @@ function BarChartAdmin({ route }) {
           onValueChange={(value) => setValue(value)}
         />
       </div>
-      <Buttons />
+      <Buttons>
+        <Button>days</Button>
+        <Button>months</Button>
+        <Button>years</Button>
+      </Buttons>
     </>
   );
 }
