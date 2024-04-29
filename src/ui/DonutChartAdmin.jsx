@@ -48,9 +48,8 @@ function DonutChartAdmin({ type, route }) {
   const colors = generateColors(dataChart.length);
   const categories = getDonutChartCategories(dataChart);
   return (
-    <div className=" flex flex-col items-center justify-center  gap-y-2  rounded-2xl bg-customGray p-4  md:py-6 lg:flex-row lg:px-8">
+    <div className=" flex flex-col items-center justify-center  gap-y-3  rounded-2xl bg-customGray p-4  md:py-6 lg:flex-row lg:px-8">
       <DonutChart
-        className="min-w-36"
         data={dataChart}
         category="value"
         index="name"
@@ -60,7 +59,7 @@ function DonutChartAdmin({ type, route }) {
         animationDuration={1000}
         onValueChange={(value) => setvalue(value)}
       />
-      <Legend categories={categories} colors={colors} className="max-w-xs" />
+      <Legend categories={categories} colors={colors}  />
     </div>
   );
 }

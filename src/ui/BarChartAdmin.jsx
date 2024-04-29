@@ -3,6 +3,7 @@ import { useState } from "react";
 import Buttons from "./Buttons";
 import Button from "./Button";
 import { generateColors, getChartCategories } from "../utils/helpers";
+import { IoBarChartOutline } from "react-icons/io5";
 const chartdataMonths = [
   {
     date: "Jan 23",
@@ -128,7 +129,13 @@ function BarChartAdmin({ route }) {
   const colors = generateColors(categories.length);
   return (
     <>
-      <div className=" mb-4 min-w-full rounded-2xl bg-customGray p-2  md:px-8  md:py-6">
+     <div className="mb-1 flex items-center gap-3">
+        <h3 className="  text-lg text-primaryColor sm:text-2xl">
+          Actions Overview
+        </h3>
+        <IoBarChartOutline className="text-lg text-primaryColor sm:text-2xl" />
+      </div>
+      <div className=" mb-2 min-w-full rounded-2xl bg-customGray p-2  md:p-6">
         <BarChart
           className="h-52 md:h-64 lg:h-80"
           data={chartdataMonths}
