@@ -4,12 +4,15 @@ import Sidebar from "./Sidebar";
 
 function AppLayout() {
   return (
-    <div className="grid min-h-dvh grid-cols-[auto_1fr] grid-rows-[auto_1fr]">
-      <Header />
+    <div className="grid min-h-full grid-cols-[auto_1fr] ">
       <Sidebar />
-      <main className="px-12 pb-12 ">
-        <Outlet />
-      </main>
+
+      <div>
+        <Header />
+        <main className=" px-12 pb-12">
+          <Outlet />
+        </main>
+      </div>
     </div>
   );
 }
