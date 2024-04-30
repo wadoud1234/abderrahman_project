@@ -4,15 +4,15 @@ import Statistic from "../../ui/Statistic";
 import Statistics from "../../ui/Statistics";
 import { MdOutlineWorkOutline } from "react-icons/md";
 import { LuUsers2 } from "react-icons/lu";
-import { TbMessageReport } from "react-icons/tb";
+import { TbChartDonut, TbMessageReport } from "react-icons/tb";
 import DonutChartAdmin from "../../ui/DonutChartAdmin";
 
-function Worker() {
+function Reviews() {
   return (
     <div>
-      {/* <h2 className="mb-4 text-xl text-primaryColor sm:text-3xl ">
-        Applications Stats
-      </h2> */}
+      <h2 className="mb-8 text-xl  font-semibold text-primaryColor sm:text-3xl">
+        Reviews Stats
+      </h2>
       <Statistics>
         <Statistic
           color={"blue"}
@@ -41,13 +41,21 @@ function Worker() {
         />
       </Statistics>
 
-      <AreaChartAdmin route={"worker"} />
-      <section className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
-        <DonutChartAdmin type="general" route="application" />
-        <DonutChartAdmin type="applicationPerJob" route="application" />
+      <AreaChartAdmin route={"reviews"} />
+
+      <div className="mb-3 flex items-center gap-3">
+        <h3 className="  text-lg text-primaryColor sm:text-2xl">
+          Workflow Summary
+        </h3>
+        <TbChartDonut className="text-lg text-primaryColor sm:text-2xl" />
+      </div>
+
+      <section className=" grid grid-cols-1 gap-4 md:grid-cols-2">
+        <DonutChartAdmin type="general" route="applications" />
+        <DonutChartAdmin type="applicationPerJob" route="applications" />
       </section>
     </div>
   );
 }
 
-export default Worker;
+export default Reviews;

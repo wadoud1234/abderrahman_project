@@ -8,11 +8,11 @@ import { LuUsers2 } from "react-icons/lu";
 import { HiArchiveBox } from "react-icons/hi2";
 import { TbChartDonut, TbMessageReport } from "react-icons/tb";
 
-function Application() {
+function CertificatesCharts() {
   return (
     <div>
       <h2 className="mb-8 text-xl  font-semibold text-primaryColor sm:text-3xl">
-        Applications Stats
+        Certificates Stats
       </h2>
 
       <Statistics>
@@ -43,20 +43,20 @@ function Application() {
         />
       </Statistics>
 
-      <BarChartAdmin route="applications" />
+      <BarChartAdmin route="certificates" />
 
-      <div className="mb-1 flex items-center gap-3">
+      <div className="mb-3 flex items-center gap-3">
         <h3 className="  text-lg text-primaryColor sm:text-2xl">
           Workflow Summary
         </h3>
         <TbChartDonut className="text-lg text-primaryColor sm:text-2xl" />
       </div>
       <section className=" grid grid-cols-1 gap-4 md:grid-cols-2">
-        <DonutChartAdmin type="general" route="applications" />
-        <DonutChartAdmin type="applicationPerJob" route="applications" />
+        <DonutChartAdmin type="general" route="certificates" />
+        <DonutChartAdmin type="applicationPerJob" route="certificates" />
       </section>
     </div>
   );
 }
 
-export default Application;
+export default CertificatesCharts;
