@@ -3,6 +3,7 @@ import { useState } from "react";
 import { generateColors, getChartCategories } from "../utils/helpers";
 import Buttons from "./Buttons";
 import Button from "./Button";
+import { RiLineChartLine } from "react-icons/ri";
 
 const chartdataMonths = [
   {
@@ -130,6 +131,12 @@ export function AreaChartAdmin({ route }) {
   const colors = generateColors(categories.length);
   return (
     <>
+     <div className="mb-1 flex items-center gap-3">
+        <h3 className="  text-lg text-primaryColor sm:text-2xl">
+          Actions Overview
+        </h3>
+        <RiLineChartLine className="text-lg text-primaryColor sm:text-2xl" />
+      </div>
       <div className=" mb-4 rounded-2xl  bg-customGray p-1 sm:p-4">
         <AreaChart
           className="h-52 md:h-64 lg:h-80"
