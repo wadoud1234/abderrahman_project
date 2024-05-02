@@ -1,10 +1,10 @@
 export function getChartCategories(dataArray) {
   const categories = new Set();
-    Object.keys(dataArray.at(0))
-      .slice(1)
-      .forEach((key) => {
-        categories.add(key);
-      });
+  Object.keys(dataArray.at(0))
+    .slice(1)
+    .forEach((key) => {
+      categories.add(key);
+    });
 
   return Array.from(categories);
 }
