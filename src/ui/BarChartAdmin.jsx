@@ -6,133 +6,24 @@ import { generateColors, getChartCategories } from "../utils/helpers";
 import { IoBarChartOutline } from "react-icons/io5";
 import { useDataAreaBarCharts } from "../services/useData";
 import Loader from "./Loader";
-// const chartdataMonths = [
-//   {
-//     date: "Jan 23",
-//     Created: 167,
-//     Accepted: 145,
-//     Declined: 135,
-//   },
-//   {
-//     date: "Feb 23",
-//     Created: 125,
-//     Accepted: 110,
-//     Declined: 155,
-//   },
-//   {
-//     date: "Mar 23",
-//     Created: 156,
-//     Accepted: 149,
-//     Declined: 145,
-//   },
-//   {
-//     date: "Apr 23",
-//     Created: 165,
-//     Accepted: 112,
-//     Declined: 125,
-//   },
-//   {
-//     date: "May 23",
-//     Created: 153,
-//     Accepted: 138,
-//     Declined: 165,
-//   },
-//   {
-//     date: "Jun 23",
-//     Created: 124,
-//     Accepted: 145,
-//     Declined: 175,
-//   },
-// ];
-// const chartdataDays = [
-//   {
-//     date: "Jan 23",
-//     Created: 170,
-//     Accepted: 150,
-//     Declined: 105,
-//   },
-//   {
-//     date: "jan 24",
-//     Created: 125,
-//     Accepted: 87,
-//     Declined: 155,
-//   },
-//   {
-//     date: "jan 25",
-//     Created: 156,
-//     Accepted: 87,
-//     Declined: 145,
-//   },
-//   {
-//     date: "jan 26",
-//     Created: 165,
-//     Accepted: 112,
-//     Declined: 125,
-//   },
-//   {
-//     date: "jan 27",
-//     Created: 153,
-//     Accepted: 138,
-//     Declined: 165,
-//   },
-//   {
-//     date: "jan 28",
-//     Created: 124,
-//     Accepted: 145,
-//     Declined: 175,
-//   },
-// ];
-// const chartdataYears = [
-//   {
-//     date: "2019",
-//     Created: 167,
-//     Accepted: 145,
-//     Declined: 135,
-//   },
-//   {
-//     date: "2020",
-//     Created: 125,
-//     Accepted: 110,
-//     Declined: 155,
-//   },
-//   {
-//     date: "2021",
-//     Created: 156,
-//     Accepted: 149,
-//     Declined: 87,
-//   },
-//   {
-//     date: "2022",
-//     Created: 165,
-//     Accepted: 112,
-//     Declined: 125,
-//   },
-//   {
-//     date: "2023",
-//     Created: 153,
-//     Accepted: 138,
-//     Declined: 165,
-//   },
-//   {
-//     date: "2024",
-//     Created: 87,
-//     Accepted: 145,
-//     Declined: 175,
-//   },
-// ];
 
 function BarChartAdmin({ route }) {
-  //route is like applications for example
   const [value, setValue] = useState(null);
   const [timeType, setTimeType] = useState("daily");
-  const { data: dataChart, isLoading } = useDataAreaBarCharts(
-    `${route}/${timeType}`,
-  );
+  const {
+    data: dataChart,
+    isLoading,
+    refetch,
+  } = useDataAreaBarCharts(route, timeType);
 
   const categories = dataChart ? getChartCategories(dataChart) : [];
 
   const colors = generateColors(categories.length);
 
+  const handleTimeTypeChange = (newTimeType) => {
+    setTimeType(newTimeType);
+    refetch();
+  };
   return (
     <>
       <div className="mb-3 flex items-center gap-3">
@@ -160,9 +51,9 @@ function BarChartAdmin({ route }) {
         )}
       </div>
       <Buttons>
-        <Button>days</Button>
-        <Button>months</Button>
-        <Button>years</Button>
+        <Button onChangeTimeType={handleTimeTypeChange}>daily</Button>
+        <Button onChangeTimeType={handleTimeTypeChange}>monthly</Button>
+        <Button onChangeTimeType={handleTimeTypeChange}>yearly</Button>
       </Buttons>
     </>
   );
