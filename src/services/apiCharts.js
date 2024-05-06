@@ -6,7 +6,13 @@ export async function getDataBarAreaCharts(route, timeType) {
   const url = `${BASE_URL_BAR_AREA_CHARTS}${route}/${timeType}`;
 
   try {
-    const response = await fetch(url);
+    const response = await fetch(url,{
+      method: "GET",
+      headers: {
+        Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MzdkMTc4N2IyNzZlNjYwMjY5YjcxMSIsImN1cnJlbnRSb2xlIjoiVXNlciIsImlhdCI6MTcxNDkzNDM4OCwiZXhwIjoxNzIyNzEwMzg4fQ.71mUxPXlvF2nZZsI458g6ThNmDhZjn7zpAXUNM7LITQ`,
+        "Content-Type": "application/json",
+      }
+    });
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }

@@ -66,9 +66,11 @@ function Workers() {
         <TbChartDonut className="text-lg text-primaryColor sm:text-2xl" />
       </div>
 
-      <section className=" grid grid-cols-1 gap-4 md:grid-cols-2">
-        <DonutChartAdmin type="GeneralDonutChart" route="workers" />
+      <section className=" grid grid-cols-1 gap-4 md:grid-cols-3 ">
+         <DonutChartAdmin type="GeneralDonutChart" route="workers" />
+        <DonutChartAdmin type="job" route="workers" />
         <DonutChartAdmin type="wilaya" route="workers" />
+        
       </section>
       <TableInfo />
     </div>
