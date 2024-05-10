@@ -1,6 +1,6 @@
 import { DonutChart, Legend } from "@tremor/react";
 // import { useEffect, useState } from "react";
-import { generateColors, getDonutChartCategories } from "../utils/helpers";
+import { generateColors, getDonutChartCategories, isArray, validateArray } from "../utils/helpers";
 import { useDataAreaBarCharts } from "../services/useData";
 import Loader from "./Loader";
 import ErrorMessage from "./ErrorMessage";
@@ -13,7 +13,7 @@ function DonutChartAdmin({ type, route }) {
     data: dataDonutChart,
     isLoading,
     error,
-  } = useDataAreaBarCharts(route, type);
+  } = useDataAreaBarCharts(route, type);//{error:null,data:[],isLoading:false}//
 
   const categories = dataDonutChart
     ? getDonutChartCategories(dataDonutChart)
@@ -28,7 +28,7 @@ function DonutChartAdmin({ type, route }) {
       {!error && !isLoading && (
         <>
           <DonutChart
-            data={dataDonutChart}
+            data={validateArray(dataDonutChart)}
             category="count"
             index="_id"
             colors={colors}
@@ -37,7 +37,7 @@ function DonutChartAdmin({ type, route }) {
             animationDuration={1000}
             onValueChange={(value) => setvalue(value)}
           />
-          <Legend categories={categories} colors={colors} />
+          {isArray(categories) && <Legend categories={categories} colors={colors} />}
         </>
       )}
     </div>

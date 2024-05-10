@@ -42,7 +42,7 @@ function TableInfo() {
             <Table>
               <TableHeadInfo />
               <TableBody>
-                {workers.filter(
+                {workers?.filter(
                   (worker) => worker.job.toLowerCase() === value.toLowerCase(),
                 ).length === 0 ? (
                   <TableRow>
@@ -54,13 +54,13 @@ function TableInfo() {
                   </TableRow>
                 ) : (
                   workers
-                    .filter(
+                    ?.filter(
                       (worker) =>
                         worker.job.toLowerCase() === value.toLowerCase(),
                     )
                     .sort((a, b) => b.rating - a.rating)
                     .slice(0, 5)
-                    .map((worker) => (
+                    ?.map((worker) => (
                       <TableRowInfo worker={worker} key={worker._id} />
                     ))
                 )}

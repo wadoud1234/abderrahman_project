@@ -1,6 +1,4 @@
-import { FiArrowLeft } from "react-icons/fi";
-import { HiHome } from "react-icons/hi2";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function RegisterForm({formState,setFormState,onSubmit}) {
     function setPassword(e){

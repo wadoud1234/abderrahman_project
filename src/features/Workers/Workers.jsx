@@ -57,7 +57,7 @@ function Workers() {
         )}
       </Statistics>
 
-      <AreaChartAdmin route="workers" />
+      <AreaChartAdmin route="workers" /> 
 
       <div className="mb-1 flex items-center gap-3">
         <h3 className="  text-lg text-primaryColor sm:text-2xl">

@@ -1,6 +1,6 @@
 import { AreaChart } from "@tremor/react";
 import { useState } from "react";
-import { generateColors, getChartCategories } from "../utils/helpers";
+import { generateColors, getChartCategories, isArray, validateArray } from "../utils/helpers";
 import Buttons from "./Buttons";
 import Button from "./Button";
 import { RiLineChartLine } from "react-icons/ri";
@@ -18,7 +18,7 @@ export function AreaChartAdmin({ route }) {
     refetch,
     error,
   } = useDataAreaBarCharts(route, timeType);
-  const categories = dataChart ? getChartCategories(dataChart) : [];
+  const categories = isArray(dataChart) ? getChartCategories(dataChart) : [];
   const colors = generateColors(categories.length);
   const handleTimeTypeChange = (newTimeType) => {
     setTimeType(newTimeType);
@@ -38,9 +38,9 @@ export function AreaChartAdmin({ route }) {
         {!error && !isLoading && (
           <AreaChart
             className="h-52 md:h-64 lg:h-80"
-            data={dataChart}
+            data={validateArray(dataChart)}
             index="date"
-            categories={categories}
+            categories={validateArray(categories)}
             colors={colors}
             yAxisWidth={30}
             showAnimation

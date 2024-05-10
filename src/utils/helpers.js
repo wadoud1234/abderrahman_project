@@ -1,15 +1,19 @@
 export function getChartCategories(dataArray) {
   const categories = new Set();
-  Object.keys(dataArray.at(0))
+  if (isArray(dataArray)){
+    Object.keys(dataArray?.at(0))
     .slice(1)
     .forEach((key) => {
       categories.add(key);
-    });
+    })
+    return categories
+  }else{
+    return []
+  }
 
-  return Array.from(categories);
 }
 export function getDonutChartCategories(dataArray) {
-  const categories = dataArray.map((dataObj) => dataObj._id);
+  const categories =isArray(dataArray)? dataArray?.map((dataObj) => dataObj._id):[];
 
   return categories;
 }
@@ -48,4 +52,12 @@ export function getDate() {
   const month = currentDate.toLocaleDateString("en-US", { month: "long" });
   const year = currentDate.getFullYear();
   return { dayOfTheWeek, day, month, year };
+}
+
+
+export function validateArray(arr){
+  return isArray(arr) ? arr : []
+}
+export function isArray(arr){
+  return Array.isArray(arr) && arr.length>0
 }
